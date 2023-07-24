@@ -63,7 +63,7 @@ public class Main {
         /*
        TO MAKE INPUT ACTIVE, MAKE ISVALID TRUE:
         */
-        boolean isValid = false;
+        boolean isValid = true;
         while(isValid) {
             try {
                 System.out.println("Enter width of rectangle: ");
