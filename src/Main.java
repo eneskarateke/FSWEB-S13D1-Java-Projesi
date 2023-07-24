@@ -39,6 +39,18 @@ public class Main {
         }
     }
 
+    static boolean isPrime(int number) {
+       if(number<=1) return false;
+
+     for(int i=2; i<=number/2; i++) {
+         if(number%i == 0) {
+             return false;
+         }
+     }
+     return true;
+    }
+
+
     public static void main(String[] args) {
 
         System.out.println("Hello world!");
@@ -58,6 +70,14 @@ public class Main {
         System.out.println("isCatPlaying(true, 10) => " + isCatPlaying(true, 10));
         System.out.println("isCatPlaying(false, 36) => " + isCatPlaying(false, 36));
         System.out.println("isCatPlaying(false, 35) => " + isCatPlaying(false, 35));
+
+        // Test isPrime
+
+        System.out.println("isPrime(7) => " + isPrime(7));
+        System.out.println("isPrime(-2) => " + isPrime(-2));
+        System.out.println("isPrime(0) => " + isPrime(0));
+        System.out.println("isPrime(4) => " + isPrime(4));
+
 
         Scanner scanner = new Scanner(System.in);
         /*
