@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class Main {
    static boolean shouldWakeUp(boolean bark, int time) {
        if(!bark) {
@@ -29,6 +30,8 @@ public class Main {
 
     static double area(double radius) {
         if (radius<0) {
+            System.out.println("Alan değeri 0'dan büyük olmalıdır");
+
             return -1;
         } else {
 
@@ -56,8 +59,32 @@ public class Main {
         System.out.println("isCatPlaying(false, 36) => " + isCatPlaying(false, 36));
         System.out.println("isCatPlaying(false, 35) => " + isCatPlaying(false, 35));
 
-        // Test area
-        System.out.println("area(5.0, 4.0) => " + area(5.0, 4.0));
+        Scanner scanner = new Scanner(System.in);
+        /*
+       TO MAKE INPUT ACTIVE, MAKE ISVALID TRUE:
+        */
+        boolean isValid = false;
+        while(isValid) {
+            try {
+                System.out.println("Enter width of rectangle: ");
+                double x = scanner.nextDouble();
+
+                System.out.println("Enter height of rectangle: ");
+                double y = scanner.nextDouble();
+
+
+                double result = area(x,y);
+
+                        // Test area
+                System.out.println("area(x, y) => " + result);
+            } catch (Exception ex) {
+                isValid=false;
+                System.out.println("Invalid Input");
+
+            }
+        }
+
+
         System.out.println("area(-1.0, 4.0) => " + area(-1.0, 4.0));
 
         // Test area for circle
